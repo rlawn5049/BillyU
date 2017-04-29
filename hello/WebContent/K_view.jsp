@@ -1,6 +1,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+	<%request.setCharacterEncoding("euc-kr"); %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -33,6 +34,16 @@
 </head>
 <body>
 	<jsp:include page="Y_NavBar.jsp"></jsp:include>
+	
+	
+	<!-- 康后康后康后康后康后康后康后康后 -->
+	<%
+	String y_pronum = request.getParameter("pronum");
+	%>
+	<a href="Y_First_Insert.jsp?pronum=<%=y_pronum %>">脚没窍扁</a>
+	<!-- 康后康后康后康后康后康后康后康后 -->
+	
+	
 	<jsp:useBean id="sel" class="com.openmarket.Capstone_productDAO"></jsp:useBean>
 	<%
 		ArrayList<String> al = sel.selectProduct();
