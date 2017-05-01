@@ -18,7 +18,7 @@ public class AddImage extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String savePath = "C:/Website/project/hello/WebContent/img"; // 저장할
+		String savePath = "C:/EGit/BillyU/hello/WebContent/img"; // 저장할
 																					// 디렉토리
 																					// (절대경로)
 		int sizeLimit = 10 * 1024 * 1024; // 10메가까지 제한 넘어서면 예외발생
