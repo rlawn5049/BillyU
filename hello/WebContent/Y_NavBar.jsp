@@ -124,7 +124,7 @@
 
 .Y_NavTopButton {
   position: fixed;
-  right: 15px;
+  right: 25px;
   bottom: 20px;
   display: none;
 }
@@ -220,7 +220,7 @@
 <div class="collapse navbar-collapse" id="myNavbar">
 <ul class="nav navbar-nav navbar-right">
 <li><a id="Y_NavContent_Right" href="Y_Chat_Form.jsp"><span class="glyphicon glyphicon-shopping-cart"></span>관심상품</a></li>
-<li><a id="Y_NavContent_Right" href="K_myPage.jsp"><span class="glyphicon glyphicon-user"></span>마이페이지</a></li>
+<li><a id="Y_NavContent_Right" href="Y_MyPage.jsp"><span class="glyphicon glyphicon-user"></span>마이페이지</a></li>
 <li><a id="Y_NavContent_Right" href="Y_Login.jsp"><span class="glyphicon glyphicon-log-in"></span>
           <%
           if(session.getAttribute("id") != null){
@@ -287,11 +287,12 @@
       
     </script>
     <div>
-      <a href="#" class="Y_NavTopButton" style="width:20px;height:20px">Top</a>
+      <a href="#" class="Y_NavTopButton" style="width:20px;height:20px">▲Top</a>
     </div>
     <center>
     <div id="Y_All_Back"></div>
     </center>
     </div>
+
 </body>
 </html>

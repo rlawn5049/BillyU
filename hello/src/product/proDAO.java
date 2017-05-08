@@ -9,7 +9,11 @@ public class proDAO {
 	Statement stmt = null;
 	ResultSet rs = null;
 	proDTO dto;
+	proDTO dto1;
+	
 	ArrayList<proDTO> pro_list = new ArrayList<proDTO>();
+	ArrayList<proDTO> pro_mylist = new ArrayList<proDTO>();
+	
 	
 	public proDAO(){
 		try{Class.forName("com.mysql.jdbc.Driver");}
@@ -53,8 +57,6 @@ public class proDAO {
 				int salprice = rs.getInt("salprice");
 				String img = rs.getString("img");
 
-				
-				
 				dto = new proDTO(pronum,nickname,catnum,title,proinfo,procondition,traway,tratype,renprice,renday,deposit,salprice,img);
 				pro_list.add(dto);
 			}
@@ -65,6 +67,6 @@ public class proDAO {
 		
 		return pro_list;
 	}
-	
+
 }
 
