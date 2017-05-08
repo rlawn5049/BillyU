@@ -51,7 +51,7 @@
     				<div id="image_preview" >
         				<img src="img/noimage.jpg " style="border: 1px solid black; width: 400px; height: 300px;" border="0" onclick="document.all.upfile.click(); ">
         				<br>
-        				<div id="J_image_box" style="display: none;">
+        				<div id="J_image_box" > <!--  style="display: none;" -->
     						<div class= "row">
     							<div class="col-lg-4">
     								<div id="J_image_2" style=" width: 100px; height: 100px; float: left;">
