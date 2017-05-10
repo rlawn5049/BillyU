@@ -9,7 +9,6 @@ public class proDAO {
 	Statement stmt = null;
 	ResultSet rs = null;
 	proDTO dto;
-	proDTO dto1;
 	
 	ArrayList<proDTO> pro_list = new ArrayList<proDTO>();
 	ArrayList<proDTO> pro_mylist = new ArrayList<proDTO>();
@@ -66,6 +65,38 @@ public class proDAO {
 		}finally{disconnect();}
 		
 		return pro_list;
+	}
+	
+	public ArrayList<proDTO> MyPage(Object id){
+		try{
+			connect();
+			String sql = "select * from product where nickname='"+id+"'";
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()){
+				int pronum = rs.getInt("pronum");
+				String nickname = rs.getString("nickname");
+				int catnum = rs.getInt("catnum");
+				String title = rs.getString("title");
+				String proinfo = rs.getString("proinfo");
+				String procondition = rs.getString("procondition");
+				String traway = rs.getString("traway");
+				String tratype = rs.getString("tratype");
+				int renprice = rs.getInt("renprice");
+				int renday = rs.getInt("renday");
+				int deposit = rs.getInt("deposit");
+				int salprice = rs.getInt("salprice");
+				String img = rs.getString("img");
+
+				dto = new proDTO(pronum,nickname,catnum,title,proinfo,procondition,traway,tratype,renprice,renday,deposit,salprice,img);
+				pro_mylist.add(dto);
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{disconnect();}
+		
+		return pro_mylist;
 	}
 
 }
